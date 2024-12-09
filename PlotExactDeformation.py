@@ -41,8 +41,9 @@ plt.close()
 plt.figure(figsize=(8,8))
 
 #Deformed grid values
-deformed_X = X + ux_exact
-deformed_Y = Y + uy_exact
+scale_factor = 0.1
+deformed_X = X + ux_exact*scale_factor
+deformed_Y = Y + uy_exact*scale_factor
 
 #Plotting both original and deformed grids
 for i in range(X.shape[0]):
